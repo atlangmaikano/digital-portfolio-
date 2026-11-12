@@ -1528,3 +1528,157 @@ body::before {
         flex-wrap: wrap;
     }
 }
+
+
+/* =====================================================
+   ATLANG'S PHOTOGRAPHS
+   Data Intelligence Visual Treatment
+===================================================== */
+
+/* HOMEPAGE PORTRAIT */
+
+.hero-photo-frame {
+    position: relative;
+    width: 100%;
+    max-width: 390px;
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+    background: var(--surface);
+    border: 1px solid var(--accent);
+    padding: 9px;
+}
+
+.hero-photo-frame::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 45px;
+    height: 4px;
+    background: var(--accent);
+    z-index: 2;
+}
+
+.hero-photo {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.photo-index {
+    position: absolute;
+    left: 9px;
+    bottom: 9px;
+    right: 9px;
+    padding: 12px 15px;
+    background: rgba(11, 13, 12, 0.88);
+    color: var(--accent);
+    font-family: var(--font-code);
+    font-size: 0.68rem;
+    letter-spacing: 2px;
+}
+
+/* ABOUT PAGE PORTRAIT */
+
+.about-photo-container {
+    flex: 0 0 270px;
+    max-width: 270px;
+}
+
+.about-photo-frame {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    padding: 8px;
+    background: var(--surface-light);
+    border: 1px solid var(--border);
+    position: relative;
+}
+
+.about-photo-frame::after {
+    content: "";
+    position: absolute;
+    width: 35px;
+    height: 4px;
+    right: -1px;
+    bottom: -1px;
+    background: var(--accent);
+}
+
+.about-photo {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.about-photo-caption {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 13px;
+    padding-left: 3px;
+    font-family: var(--font-code);
+}
+
+.about-photo-caption span:first-child {
+    color: var(--accent);
+    font-size: 0.72rem;
+    letter-spacing: 1.5px;
+}
+
+.about-photo-caption span:last-child {
+    color: var(--muted);
+    font-size: 0.62rem;
+}
+
+/* TABLET ADJUSTMENTS */
+
+@media (max-width: 950px) {
+
+    .hero-photo-frame {
+        max-width: 360px;
+    }
+
+    .about-photo-container {
+        flex-basis: 250px;
+        max-width: 250px;
+    }
+
+}
+
+/* MOBILE ADJUSTMENTS */
+
+@media (max-width: 650px) {
+
+    .hero-visual {
+        min-height: auto;
+        padding: 20px 0 65px;
+    }
+
+    .hero-photo-frame {
+        width: 85%;
+        max-width: 340px;
+        margin: auto;
+    }
+
+    .floating-note {
+        bottom: 0;
+        right: 0;
+        max-width: 210px;
+    }
+
+    .about-profile-content {
+        align-items: flex-start;
+        gap: 30px;
+    }
+
+    .about-photo-container {
+        width: 100%;
+        max-width: 300px;
+        flex: none;
+    }
+
+}
